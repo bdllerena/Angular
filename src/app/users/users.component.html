@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Tabla de Usuarios</h2>
+  <p>Los siguientes datos son:</p>
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Avatar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users.data">
+        <td> {{ user.id }}</td>
+        <td> {{ user.first_name }}</td>
+        <td> {{ user.last_name }}</td>
+        <td><img src={{user.avatar}} /></td>
+      </tr>
+    </tbody>
+  </table>
+          <button class="btn btn-lg btn-danger btn-block text-uppercase" (click)="salir()">Salir</button>
+</div>

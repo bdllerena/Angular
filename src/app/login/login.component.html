@@ -1,0 +1,28 @@
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Panel de acceso</h5>
+          <form class="form-signin"  (ngSubmit)="onSubmit()" #loginForm="ngForm" novalidate>
+            <hr />
+            <div ngModelGroup="login">
+            <div class="form-label-group">
+              <input type="email"id="email" name="email" class="form-control" placeholder="Email address"  [(ngModel)]="loginModel.email" required>
+              <label for="inputEmail">Email address</label>
+            </div>
+
+            <div class="form-label-group">
+              <input type="password" id="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="loginModel.password" required>
+              <label for="inputPassword">Password</label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Entrar</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
